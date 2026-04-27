@@ -18,6 +18,14 @@
             </div>
 
 
+            {{-- Success Alert --}}
+            @if (session('success'))
+                <div class="alert alert-success mb-5 rounded-xl text-[0.83rem]">
+                    <i class="fas fa-circle-check"></i>
+                    <span>{{ session('success') }}</span>
+                </div>
+            @endif
+
             {{-- Error Alert --}}
             @if ($errors->any())
             <div class="alert alert-error mb-5 rounded-xl text-[0.83rem]">
